@@ -1,0 +1,74 @@
+nav {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+nav {
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+        "logo inscrire"
+        "hebergements activites";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto 3rem;
+    width: 100vw;
+    max-width: 1300px;
+}
+
+img {
+    grid-area: logo;
+}
+
+nav a {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+nav a, nav a:visited {
+    color: grey;
+    border-bottom: 1px solid #0065FC;
+}
+
+nav a:first-of-type {
+    grid-area: logo;
+    border: none;
+}
+
+nav a:nth-of-type(2) {
+    grid-area: inscrire;
+    font-weight: bolder;
+    color:#0065FC;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    border: none;
+}
+
+nav a:nth-of-type(3) {
+    grid-area: hebergements;
+}
+
+nav a:last-of-type {
+    grid-area: activites;
+}
+
+nav a:hover{
+    border-bottom:1px solid #0065FC;
+    color:#0065FC;
+}
+
+@media screen AND (min-width: 768px) {
+    nav {
+        grid-template-areas:
+            "logo hebergements activites inscrire";
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
