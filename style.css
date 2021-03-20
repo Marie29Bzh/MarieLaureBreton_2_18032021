@@ -33,8 +33,8 @@ nav a {
 }
 
 nav a, nav a:visited {
-    color: grey;
-    border-bottom: 1px solid #0065FC;
+    color: black;
+    border-bottom: 1px solid #0065FC
 }
 
 nav a:first-of-type {
@@ -53,18 +53,29 @@ nav a:nth-of-type(2) {
 
 nav a:nth-of-type(3) {
     grid-area: hebergements;
+    border: none;
 }
 
 nav a:last-of-type {
     grid-area: activites;
+    border: none;
 }
 
 nav a:hover{
-    border-bottom:1px solid #0065FC;
+    /* border-bottom:1px solid #0065FC;*/
+    text-decoration-line: overline;
     color:#0065FC;
 }
 
-@media screen AND (min-width: 768px) {
+@media screen AND (max-width: 768px)
+{
+    nav a:hover
+    {
+        text-decoration-line: underline;
+    }
+}
+@media screen AND (min-width: 768px)
+{
     nav {
         grid-template-areas:
             "logo hebergements activites inscrire";
