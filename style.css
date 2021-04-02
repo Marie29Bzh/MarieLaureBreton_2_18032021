@@ -368,6 +368,7 @@ aside.stars.fourstars::after {
     content: "\f005";
     color: #F2F2F2
 }
+
 aside.stars.threestars::before {
     content: "\f005\f005\f005";
 }
@@ -386,26 +387,29 @@ main {
 @media screen AND (min-width: 768px) {
     main {
         display: flex;
+        flex-direction: row-reverse;
     }
 }
 
 section.hebergements {
     background-color: #fff;
     border-radius: 0rem;
-    padding: 10px 15px 10px 3px;
+    padding: 10px 25px 10px 3px;
 }
 
 @media screen AND (min-width: 768px) {
     section.hebergements {
         background-color: #F2F2F2;
         border-radius: 1rem;
-        padding: 10px 0px 10px 3px;
+        padding: 10px 15px 10px 0px;
         width: 75%;
         margin-right: 30px;
     }
 }
 
 .hebergements h2 {
+    display: grid;
+    grid-template-columns: 100%;
     margin-left: 15px;
     margin-block-end: 15px;
 }
@@ -413,6 +417,13 @@ section.hebergements {
 @media screen AND (min-width: 768px) {
     .hebergements h2 {
         margin-left: 15px;
+    }
+}
+
+@media screen AND (min-width: 768px) {
+    .vignettes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -454,4 +465,100 @@ section.hebergements {
     margin-left: 7px;
 }
 
+span.afficherplus {
+    margin-left: 10px;
+    font-size: large;
+}
+
 /*Fin Main*/
+
+/*activités*/
+
+section.activites {
+    background-color: #fff;
+    border-radius: 0rem;
+    padding: 10px 25px 10px 3px;
+}
+
+@media screen AND (min-width: 768px) {
+    section.activites {
+        padding: 10px 15px 10px 0px;
+        width: 100%;
+        margin-right: 30px;
+    }
+}
+
+.activites h2 {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-left: 15px;
+    margin-block-end: 15px;
+}
+
+@media screen AND (min-width: 768px) {
+    .activites h2 {
+        margin-left: 15px;
+    }
+}
+
+@media screen AND (min-width: 768px) {
+    .vignettes_activ {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.activites img {
+    border-radius: 1em;
+    width: 100%;
+    height: 110px;
+    max-width: 100%;
+    object-fit: cover;
+    grid-area: photo;
+}
+
+.activites article {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "photo" "nomHotel";
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px 2px #dad8d8;
+    margin-bottom: 10px;
+    padding: 4px;
+    margin-left: 15px;
+}
+
+.activites h3 {
+    margin-block-start: 7px;
+    margin-block-end: 7px;
+    margin-left: 7px;
+}
+
+/*footer*/
+
+.mentions article {
+    background-color: inherit;
+    border-radius: 0rem;
+    box-shadow: none;
+    margin-left: 15px;
+}
+
+span.mentions_footer {
+    font-size: large;
+}
+
+@media screen AND (min-width: 768px) {
+    mentions article {
+        display: flex;
+    }
+}
+
+@media screen AND (min-width: 768px) {
+    section.mentions {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        border-radius: 0rem;
+    }
+}
