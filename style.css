@@ -3,12 +3,13 @@ body {
     font-size: 14px;
     margin-bottom: auto;
     margin: 0;
+    border: 1px solid;
 }
 
 body>*:not(footer, nav, main) {
     padding: 1rem;
-    width: calc(100%-2rem);
-    /* border: 1px solid;*/
+    width: calc(100% - 2rem);
+    /*border: 1px solid;*/
 }
 
 body>*:not(footer) {
@@ -22,7 +23,7 @@ nav {
     grid-template-areas: "logo inscrire" "hebergements activites";
     grid-template-columns: 50% 50%;
     grid-template-rows: auto 3rem;
-    width: 100vw;
+    width: 100%;
     max-width: 1300px;
 }
 
@@ -90,7 +91,7 @@ nav a:hover {
     text-decoration-line: overline;
 }
 
-/*Trouvez votre hébergement*/
+/*Trouvez votre hÃ©bergement*/
 
 h2 {
     width: 100%;
@@ -147,7 +148,6 @@ h2 {
 .filtre {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 1em;
 }
 
 .filtre h3 {
@@ -244,7 +244,7 @@ h2 {
 
 /*Main*/
 
-/*1ère section populaires*/
+/*1ere section populaires*/
 
 section {
     background-color: #F2F2F2;
@@ -263,7 +263,8 @@ section {
 .populaire h2 {
     display: grid;
     grid-template-columns: 80% 20%;
-    grid-template-rows: 40px;
+    margin-block-end: 1em;
+    margin-block-start: 1em;
 }
 
 /*media_populaire h2*/
@@ -271,7 +272,7 @@ section {
 @media screen AND (min-width: 768px) {
     .populaire h2 {
         grid-template-rows: 20px;
-        margin-block-end: 1em;
+        margin-block-end: 1.3em;
     }
 }
 
@@ -294,6 +295,7 @@ article {
 @media screen AND (min-width: 768px) {
     .populaire article {
         grid-template-rows: auto;
+        margin-bottom: 30px;
     }
 }
 
@@ -344,7 +346,6 @@ aside.populaire {
     aside.populaire {
         min-width: min-content;
         width: 100%;
-        padding-left: 15px;
     }
 }
 
@@ -378,23 +379,27 @@ aside.stars.threestars::after {
     color: #F2F2F2
 }
 
-/*Fin 1ère section populaires*/
+/*Fin 1ere section populaires*/
 
 main {
     display: block;
+    width: 100%;
+    border: 1px solid;
 }
 
 @media screen AND (min-width: 768px) {
     main {
         display: flex;
         flex-direction: row-reverse;
+        width: calc(100% - 2rem);
+        padding: 1rem;
     }
 }
 
 section.hebergements {
     background-color: #fff;
     border-radius: 0rem;
-    padding: 10px 25px 10px 3px;
+    padding-left: 15px;
 }
 
 @media screen AND (min-width: 768px) {
@@ -410,30 +415,42 @@ section.hebergements {
 .hebergements h2 {
     display: grid;
     grid-template-columns: 100%;
-    margin-left: 15px;
-    margin-block-end: 15px;
+    margin-block-end: 1em;
+    margin-block-start: 1em;
 }
 
 @media screen AND (min-width: 768px) {
     .hebergements h2 {
-        margin-left: 15px;
+        margin-left: 35px;
     }
 }
 
 @media screen AND (min-width: 768px) {
     .vignettes {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 }
 
 .hebergements img {
-    border-radius: 1em;
     width: 100%;
     height: 110px;
     max-width: 100%;
     object-fit: cover;
     grid-area: photo;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+@media screen AND (min-width: 768px) {
+    .hebergements img {
+        width: 100%;
+        height: 110px;
+        max-width: 100%;
+        object-fit: cover;
+        grid-area: photo;
+    }
 }
 
 .hebergements article {
@@ -444,8 +461,20 @@ section.hebergements {
     border-radius: 1rem;
     box-shadow: 2px 2px 5px 2px #dad8d8;
     margin-bottom: 10px;
-    padding: 4px;
-    margin-left: 15px;
+    max-width: 327px;
+}
+
+@media screen AND (min-width: 768px) {
+    .hebergements article {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: "photo" "nomHotel" "description" "etoiles";
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: 2px 2px 5px 2px #dad8d8;
+        margin-bottom: 30px;
+        max-width: 250px;
+    }
 }
 
 .hebergements h3 {
@@ -466,33 +495,59 @@ section.hebergements {
 }
 
 span.afficherplus {
-    margin-left: 10px;
     font-size: large;
+}
+
+@media screen AND (min-width: 768px) {
+    span.afficherplus {
+        margin-left: 30px;
+    }
 }
 
 /*Fin Main*/
 
-/*activités*/
+/*activites*/
 
 section.activites {
     background-color: #fff;
     border-radius: 0rem;
-    padding: 10px 25px 10px 3px;
 }
 
 @media screen AND (min-width: 768px) {
     section.activites {
-        padding: 10px 15px 10px 0px;
         width: 100%;
-        margin-right: 30px;
     }
 }
 
 .activites h2 {
     display: grid;
     grid-template-columns: 100%;
-    margin-left: 15px;
-    margin-block-end: 15px;
+    margin-block-end: 1em;
+    margin-block-start: 1em;
+}
+
+article.a1 {
+    grid-area: a1;
+}
+
+article.a2 {
+    grid-area: a2;
+}
+
+article.a3 {
+    grid-area: a3;
+}
+
+article.a4 {
+    grid-area: a4;
+}
+
+article.a5 {
+    grid-area: a5;
+}
+
+article.a6 {
+    grid-area: a6;
 }
 
 @media screen AND (min-width: 768px) {
@@ -505,34 +560,61 @@ section.activites {
     .vignettes_activ {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "a1 a2 a4 a5"
+            "a1 a2 a4 ."
+            "a1 . a4 a6"
+            "a1 a3 a4 a6";
+        /* row-gap: 15px; */
+        column-gap: 40px;
+        grid-template-rows: 165px 45px 45px 165px;
     }
 }
 
 .activites img {
-    border-radius: 1em;
     width: 100%;
-    height: 110px;
+    height: 140px;
     max-width: 100%;
     object-fit: cover;
     grid-area: photo;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
+
 
 .activites article {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas: "photo" "nomHotel";
+  
     background-color: white;
     border-radius: 1rem;
-    box-shadow: 2px 2px 5px 2px #dad8d8;
+    box-shadow: 0px 2px 6px 1px #dad8d8;
     margin-bottom: 10px;
-    padding: 4px;
-    margin-left: 15px;
+    padding: 0px;
+    max-width: 330px;
 }
 
+
+
 .activites h3 {
-    margin-block-start: 7px;
-    margin-block-end: 7px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
     margin-left: 7px;
+}
+
+
+@media screen AND (min-width: 768px) {
+    .activites img {
+        height: calc(100% - 3.5rem);
+    }
+    .activites article {
+    height: 100%;
+        /* display: flex; */
+        /* flex-wrap: wrap; */
+    }
+    .activites h3 {
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-left: 7px;
+    }
 }
 
 /*footer*/
