@@ -41,7 +41,6 @@ nav a {
 
 nav a, nav a:visited {
     color: black;
-    border-bottom: 1px solid #0065FC
 }
 
 nav a:first-of-type {
@@ -63,18 +62,19 @@ nav a:nth-of-type(3) {
     grid-area: hebergements;
     border: none;
     justify-content: center;
+    border-bottom: 4px solid #F2F2F2;
 }
 
 nav a:last-of-type {
     grid-area: activites;
     border: none;
     justify-content: center;
+    border-bottom: 4px solid #F2F2F2;
 }
 
 nav a:hover {
-    /* border-bottom:1px solid #0065FC;*/
-    text-decoration-line: underline;
-    color: #0065FC;
+    border-bottom: 4px solid #0065FC;
+    /*text-decoration-line: underline;*/
 }
 
 /*media_nav*/
@@ -82,13 +82,34 @@ nav a:hover {
 @media screen AND (min-width: 768px) {
     nav {
         grid-template-areas: "logo hebergements activites inscrire";
-        grid-template-columns: 2fr 1fr 1fr 1fr;
+        grid-template-columns: 4fr 1fr 1fr 1fr;
         grid-template-rows: auto;
     }
 }
 
-nav a:hover {
-    text-decoration-line: overline;
+@media screen AND (min-width: 768px) {
+    nav a:hover {
+        border-top: 4px solid #0065FC;
+    }
+}
+
+@media screen AND (min-width: 768px) {
+    nav a:first-of-type {
+        border-top: none;
+        border-bottom: none;
+    }
+    nav a:nth-of-type(2) {
+        border-bottom: none;
+    }
+    nav a:nth-of-type(3) {
+        border-bottom: none;
+    }
+    nav a:last-of-type {
+        border-bottom: none;
+    }
+    nav a:nth-of-type(2) {
+        border-bottom: none;
+    }
 }
 
 /*Trouvez votre hÃ©bergement*/
@@ -173,6 +194,15 @@ h2 {
     width: max-content;
     margin-block-end: 1em;
     font-size: small;
+    cursor: pointer;
+}
+
+@media screen AND (min-width: 768px) {
+    .filtre button:hover {
+        background-color: #0065FC;
+        transition: 1s ease-in-out;
+        color: white;
+    }
 }
 
 .filtre .icon {
@@ -199,6 +229,12 @@ h2 {
     .filtre h3 {
         margin-block-end: 1em;
         margin-right: 30px;
+    }
+}
+
+@media screen AND (min-width: 768px) {
+    .filtre {
+        flex-flow: nowrap;
     }
 }
 
@@ -269,10 +305,11 @@ section {
 
 /*media_populaire h2*/
 
-@media screen AND (min-width: 768px) {
+@media screen AND (min-width: 768px) and (max-width: 1024px) {
     .populaire h2 {
         grid-template-rows: 20px;
         margin-block-end: 1.3em;
+        font-size: large;
     }
 }
 
@@ -282,6 +319,13 @@ article {
     box-shadow: 2px 2px 5px 2px #dad8d8;
     margin-bottom: 10px;
     padding: 4px;
+    cursor: pointer;
+}
+
+@media screen AND (min-width: 768px) {
+    article:hover, article:focus {
+        transform: translateY(-6px);
+    }
 }
 
 .populaire article {
@@ -343,6 +387,13 @@ aside.populaire {
 }
 
 @media screen AND (min-width: 768px) {
+    aside.populaire {
+        min-width: min-content;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
     aside.populaire {
         min-width: min-content;
         width: 100%;
@@ -413,15 +464,24 @@ section.hebergements {
 }
 
 .hebergements h2 {
-    display: grid;
-    grid-template-columns: 100%;
+    /*display: grid;*/
+    /*grid-template-columns: 100%;*/
     margin-block-end: 1em;
     margin-block-start: 1em;
 }
 
-@media screen AND (min-width: 768px) {
+/*
+@media screen AND (min-width: 768px) and (max-width: 1024px) {
     .hebergements h2 {
         margin-left: 35px;
+        font-size: large;
+    }
+}
+*/
+
+@media screen AND (min-width: 768px) {
+    .hebergements h2 {
+        margin-inline-start: 1.5em;
     }
 }
 
@@ -474,6 +534,7 @@ section.hebergements {
         box-shadow: 2px 2px 5px 2px #dad8d8;
         margin-bottom: 30px;
         max-width: 250px;
+        width: 250px;
     }
 }
 
@@ -515,10 +576,10 @@ section.activites {
 }
 
 .activites h2 {
-    display: grid;
-    grid-template-columns: 100%;
+    /*display: grid;
+    grid-template-columns: 100%;*/
     margin-block-end: 1em;
-    margin-block-start: 1em;
+    /*margin-block-start: 1em;*/
 }
 
 article.a1 {
@@ -543,12 +604,6 @@ article.a5 {
 
 article.a6 {
     grid-area: a6;
-}
-
-@media screen AND (min-width: 768px) {
-    .activites h2 {
-        margin-left: 15px;
-    }
 }
 
 @media screen AND (min-width: 768px) {
@@ -579,6 +634,7 @@ article.a6 {
     margin-bottom: 10px;
     padding: 0px;
     max-width: 330px;
+    height: 29%;
 }
 
 .activites h3 {
@@ -603,13 +659,27 @@ article.a6 {
     }
 }
 
+@media screen AND (min-width: 768px) and (max-width: 1024px) {
+    .activites h2 {
+        font-size: large;
+    }
+}
+
 /*footer*/
+
+.mentions article p {
+    margin-block-start: 0;
+}
 
 .mentions article {
     background-color: inherit;
     border-radius: 0rem;
     box-shadow: none;
     margin-left: 15px;
+}
+
+.mentions article p {
+    margin-block-start: 0;
 }
 
 span.mentions_footer {
@@ -624,7 +694,7 @@ footer {
 
 @media screen AND (min-width: 768px) {
     footer {
-        /* width: 90%; */
+        width: 100%;
     }
 }
 
@@ -638,11 +708,74 @@ footer {
     section.mentions {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        width: 100%;
+        width: 90%;
         border-radius: 0rem;
-        background color: i;
         background-color: inherit;
         margin: auto;
         max-width: 1300px;
     }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 768px) {
+    body {
+        font-size: 10px;
+    }
+    .hebergements article {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: "photo" "nomHotel" "description" "etoiles";
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: 2px 2px 5px 2px #dad8d8;
+        margin-bottom: 10px;
+        max-width: 140px;
+        width: 140px;
+    }
+    .populaire h2 {
+        font-size: small;
+        display: grid;
+        grid-template-columns: 80% 20%;
+        margin-block-end: 1em;
+        margin-block-start: 1em;
+    }
+    .populaire article {
+        display: grid;
+        grid-template-columns: 35% 65%;
+        grid-column-gap: 10px;
+        grid-template-areas: "photo nomHotel" "photo description" "photo etoiles";
+    }
+    .hebergements h2 {
+        font-size: small;
+    }
+    span.afficherplus {
+        font-size: small;
+        margin-left: 15px;
+    }
+    .activites h2 {
+        font-size: small;
+    }
+    .vignettes_activ {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "a1 a2 a3" "a4 a5 a6";
+        grid-template-rows: 150px 150px;
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+    .activites img {
+        height: calc(100% - 2.5rem);
+    }
+    main {
+        display: flex;
+        width: 95%;
+    }
+    span.mentions_footer {
+        font-size: small;
+    }
+}
+
+/*
+* {
+    border: 1px solid;
+}
+*/
