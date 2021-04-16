@@ -107,7 +107,7 @@ h2 {
 .searchButton {
     width: 40px;
     height: 36px;
-    border: 0.5px solid #0065FC;
+    border: none;
     background: #0065FC;
     text-align: center;
     color: #fff;
@@ -160,7 +160,7 @@ span.rechercher {
     font-family: 'Raleway', sans-serif;
     outline: none;
     width: max-content;
-    margin-block-end: 1em;
+    margin-bottom: 1em;
     font-size: small;
     cursor: pointer;
 }
@@ -172,9 +172,8 @@ span.rechercher {
     text-decoration: none;
     margin-right: 8px;
     margin-left: -1px;
-    width: 46px;
-    height: 46px;
-    border: 2px solid #DEEBFF;
+    width: 48px;
+    height: 48px;
     background: #DEEBFF;
     color: #0065FC;
     cursor: pointer;
@@ -228,8 +227,8 @@ section {
 .populaire h2 {
     display: grid;
     grid-template-columns: 80% 20%;
-    margin-block-end: 1em;
-    margin-block-start: 1em;
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 article {
@@ -260,14 +259,14 @@ article {
 
 article h3 {
     grid-area: nomHotel;
-    margin-block-start: 6px;
-    margin-inline-end: 50px;
+    margin-top: 6px;
+    /*margin-inline-end: 50px;*/
 }
 
 article p {
     grid-area: description;
-    margin-block-start: 1em;
-    margin-inline-end: 10px;
+    margin-top: 1em;
+    /*margin-inline-end: 10px;*/
 }
 
 i.fas.fa-chart-line {
@@ -284,7 +283,7 @@ aside.stars {
     font-family: 'Font Awesome 5 Free';
     font-weight: bold;
     grid-area: etoiles;
-    margin-inline-end: 10px;
+    /*margin-inline-end: 10px;*/
     color: #0065FC;
 }
 
@@ -324,8 +323,8 @@ section.hebergements {
 }
 
 .hebergements h2 {
-    margin-block-end: 1em;
-    margin-block-start: 1em;
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 .hebergements img {
@@ -350,19 +349,19 @@ section.hebergements {
 }
 
 .hebergements h3 {
-    margin-block-start: 7px;
-    margin-block-end: 7px;
+    margin-top: 7px;
+    margin-bottom: 7px;
     margin-left: 7px;
 }
 
 .hebergements p {
-    margin-block-start: 0;
-    margin-block-end: 7px;
+    margin-top: 0;
+    margin-bottom: 7px;
     margin-left: 7px;
 }
 
 .hebergements aside.stars {
-    margin-block-end: 7px;
+    margin-bottom: 7px;
     margin-left: 7px;
 }
 
@@ -381,7 +380,7 @@ section.activites {
 }
 
 .activites h2 {
-    margin-block-end: 1em;
+    margin-bottom: 1em;
 }
 
 article.a1 {
@@ -429,15 +428,15 @@ article.a6 {
 }
 
 .activites h3 {
-    margin-block-start: 1em;
-    margin-block-end: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     margin-left: 7px;
 }
 
 /*footer*/
 
 .mentions article p {
-    margin-block-start: 0;
+    margin-top: 0;
 }
 
 .mentions article {
@@ -445,10 +444,6 @@ article.a6 {
     border-radius: 0rem;
     box-shadow: none;
     margin-left: 15px;
-}
-
-.mentions article p {
-    margin-block-start: 0;
 }
 
 span.mentions_footer {
@@ -486,6 +481,7 @@ footer {
     }
     .searchButton {
         width: 140px;
+        border-radius: 0px 9px 9px 0px;
     }
     i.fas.fa-search {
         display: none;
@@ -500,7 +496,7 @@ footer {
         color: white;
     }
     .filtre h3 {
-        margin-block-end: 1em;
+        margin-bottom: 1em;
         margin-right: 30px;
     }
     .filtre {
@@ -525,7 +521,7 @@ footer {
         margin-inline-end: 20px;
     }
     article p {
-        margin-block-start: -1em;
+        margin-top: -1em;
     }
     aside.populaire {
         min-width: min-content;
@@ -587,8 +583,8 @@ footer {
         height: 100%;
     }
     .activites h3 {
-        margin-block-start: 1em;
-        margin-block-end: 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
         margin-left: 7px;
     }
     footer {
@@ -615,7 +611,7 @@ footer {
 @media screen AND (min-width: 768px) and (max-width: 1024px) {
     .populaire h2 {
         grid-template-rows: 20px;
-        margin-block-end: 1.3em;
+        margin-bottom: 1.3em;
         font-size: large;
     }
     .activites h2 {
@@ -642,8 +638,8 @@ footer {
         font-size: small;
         display: grid;
         grid-template-columns: 80% 20%;
-        margin-block-end: 1em;
-        margin-block-start: 1em;
+        margin-bottom: 1em;
+        margin-top: 1em;
     }
     .populaire article {
         display: grid;
