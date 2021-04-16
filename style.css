@@ -123,7 +123,7 @@ span.rechercher {
 .map {
     width: 40px;
     height: 36px;
-    border: 0.5px solid #ecf0f1;
+    border: none;
     background: #ecf0f1;
     text-align: center;
     color: black;
@@ -517,9 +517,10 @@ footer {
         grid-template-rows: auto;
         margin-bottom: 30px;
     }
-    article h3 {
+    /*article h3 {
         margin-inline-end: 20px;
     }
+    */
     article p {
         margin-top: -1em;
     }
@@ -534,7 +535,7 @@ footer {
         padding: 1rem;
     }
     .hebergements h2 {
-        margin-inline-start: 1.5em;
+        margin-left: 1.5em;
     }
     .vignettes {
         display: flex;
