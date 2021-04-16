@@ -6,13 +6,13 @@ body {
     /*border: 1px solid;*/
 }
 
-body>*:not(footer, nav, main) {
+body>*:not( footer, nav, main) {
     padding: 1rem;
     width: calc(100% - 2rem);
     /*border: 1px solid;*/
 }
 
-body>*:not(footer) {
+body>*:not( footer) {
     max-width: 1300px;
     margin: auto;
 }
@@ -235,6 +235,7 @@ article {
     background-color: white;
     border-radius: 1rem;
     box-shadow: 2px 2px 5px 2px #dad8d8;
+    margin: auto;
     margin-bottom: 10px;
     padding: 4px;
     cursor: pointer;
@@ -444,6 +445,7 @@ article.a6 {
     border-radius: 0rem;
     box-shadow: none;
     margin-left: 15px;
+    margin:0;
 }
 
 span.mentions_footer {
@@ -645,7 +647,7 @@ footer {
     .populaire article {
         display: grid;
         grid-template-columns: 35% 65%;
-        grid-column-gap: 10px;
+        grid-column-gap: 6px;
         grid-template-areas: "photo nomHotel" "photo description" "photo etoiles";
     }
     .hebergements h2 {
