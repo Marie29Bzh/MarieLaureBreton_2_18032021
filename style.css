@@ -40,7 +40,14 @@ nav {
     max-width: 1300px;
 }
 
+/*
 img {
+    grid-area: logo;
+}
+*/
+
+img.logo {
+    margin-left: 10px;
     grid-area: logo;
 }
 
@@ -638,6 +645,9 @@ footer {
     }
     h3 {
         font-size: initial;
+    }
+    img.logo {
+        margin-left: 0px;
     }
 }
 
