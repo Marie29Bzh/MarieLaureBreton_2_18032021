@@ -3,27 +3,12 @@ body {
     font-size: 14px;
     margin-bottom: auto;
     margin: 0;
-    /*border: 1px solid;*/
 }
-
-/*
-body>*:not( footer, nav, main) {
-    padding: 1rem;
-    width: calc(100% - 2rem);
-    /*border: 1px solid;
-}*/
 
 body>div, body>.activites {
     padding: 1rem;
     width: calc(100% - 2rem);
-    /*border: 1px solid;*/
 }
-
-/*
-body>*:not( footer) {
-    max-width: 1300px;
-    margin: auto;
-}*/
 
 body>nav, body>div, body>main, body>.activites {
     max-width: 1300px;
@@ -39,12 +24,6 @@ nav {
     width: 100%;
     max-width: 1300px;
 }
-
-/*
-img {
-    grid-area: logo;
-}
-*/
 
 img.logo {
     margin-left: 10px;
@@ -281,13 +260,11 @@ article {
 article h3 {
     grid-area: nomHotel;
     margin-top: 6px;
-    /*margin-inline-end: 50px;*/
 }
 
 article p {
     grid-area: description;
     margin-top: 1em;
-    /*margin-inline-end: 10px;*/
 }
 
 i.fas.fa-chart-line {
@@ -304,7 +281,6 @@ aside.stars {
     font-family: 'Font Awesome 5 Free';
     font-weight: bold;
     grid-area: etoiles;
-    /*margin-inline-end: 10px;*/
     color: #0065FC;
 }
 
@@ -335,7 +311,6 @@ aside.stars.threestars::after {
 main {
     display: block;
     width: 100%;
-    /*border: 1px solid;*/
 }
 
 section.hebergements {
@@ -539,7 +514,6 @@ footer {
     .populaire h2 {
         grid-template-rows: 20px;
         margin-bottom: 1.3em;
-        /*font-size: large;*/
     }
     .populaire article {
         grid-template-rows: auto;
@@ -547,10 +521,7 @@ footer {
         grid-gap: .5rem;
         width: auto;
     }
-    /*article h3 {
-        margin-inline-end: 20px;
-    }
-    */
+
     article p {
         margin-top: -1em;
     }
@@ -712,9 +683,3 @@ footer {
         font-size: small;
     }
 }
-
-/*
-* {
-    border: 1px solid;
-}
-*/
